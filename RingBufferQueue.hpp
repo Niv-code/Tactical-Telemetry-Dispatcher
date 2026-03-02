@@ -7,13 +7,17 @@
 class RingBufferQueue
 {
     private:
-    std::array<TelemetryMessage*,QUEUE_CAPACITY> buffer;// Circular buffer to hold pointers to messages
+    std::array<TelemetryMessage*,QUEUE_CAPACITY> buffer;
     int head;
     int tail;
-    std::mutex queueMutex;// Mutex for thread safety
+    std::mutex queueMutex;
     public:
-    RingBufferQueue();// Initializes head and tail to 0.
-    bool enqueue(TelemetryMessage* msg);// Adds a message pointer to the queue. Returns false if the queue is full.
-    TelemetryMessage* dequeue();// Removes and returns a message pointer from the queue. Returns nullptr if the queue is empty.
-    bool isEmpty();// Checks if the queue is empty. Returns true if empty, false otherwise.
+    // Initializes head and tail to 0.
+    RingBufferQueue();
+    // Adds a message pointer to the queue. Returns false if the queue is full.
+    bool enqueue(TelemetryMessage* msg);
+    // Removes and returns a message pointer from the queue. Returns nullptr if the queue is empty.
+    TelemetryMessage* dequeue();
+    // Checks if the queue is empty. Returns true if empty, false otherwise.
+    bool isEmpty();
 };

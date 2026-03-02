@@ -11,8 +11,8 @@ struct TelemetryMessage {
     
     void reset() {
         timestamp = 0;
-        priority = Priority::LOW;      // defalt priority
-        type = SensorType::IMU;        // default sensor type
-        payload.fill(0);               // Clear payload data
+        priority = Priority::LOW;      
+        type = SensorType::IMU;        
+        payload.fill(0);               
     }
 };

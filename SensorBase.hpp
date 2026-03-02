@@ -18,9 +18,14 @@ class SensorBase
     void sendData();
 
     public:
-    SensorBase(MemoryPool& p, RingBufferQueue& q, Priority prio, SensorType t);// Constructor to initialize references and variables, and sets running = false.
-    void start();// Starts the sensor's worker thread, which runs the loop() function.
-    virtual ~SensorBase();// Virtual destructor to ensure proper cleanup in derived classes
-    void stop();// Safely stops the sensor's worker thread.
-    virtual void loop() = 0; //Pure Virtual Function
+    // Constructor to initialize references and variables, and sets running = false.
+    SensorBase(MemoryPool& p, RingBufferQueue& q, Priority prio, SensorType t);
+    // Starts the sensor's worker thread, which runs the loop() function.
+    void start();
+    // Virtual destructor to ensure proper cleanup in derived classes
+    virtual ~SensorBase();
+    // Safely stops the sensor's worker thread.
+    void stop();
+    //Pure Virtual Function
+    virtual void loop() = 0; 
 };   
