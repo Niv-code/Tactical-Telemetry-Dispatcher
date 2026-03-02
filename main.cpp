@@ -14,7 +14,7 @@
 #include "ThermalSensor.hpp"
 #include "GpsSensor.hpp"
 #include "ImuSensor.hpp"
-
+#define VERSION 1
 int main() {
     std::cout << "--- Tactical Telemetry System Starting ---" << std::endl;
     MemoryPool pool;
