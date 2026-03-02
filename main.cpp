@@ -2,15 +2,11 @@
 #include <vector>
 #include <chrono>
 #include <thread>
-
-// Headers של התשתית
 #include "MemoryPool.hpp"
 #include "RingBufferQueue.hpp"
 #include "Dispatcher.hpp"
 #include "SensorBase.hpp" 
 #include "Types.hpp"
-
-// Headers של החיישנים הספציפיים
 #include "ThermalSensor.hpp"
 #include "GpsSensor.hpp"
 #include "ImuSensor.hpp"
